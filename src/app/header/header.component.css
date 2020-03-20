@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding: 0px 80px;
+    background-color: black;
+}
+
+.header >  img{
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.header > nav > ul > li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+.header > nav > ul > li > a{
+    /* text-decoration-line: none; */
+    color: white;
+}

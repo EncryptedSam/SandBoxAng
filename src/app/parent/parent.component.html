@@ -1,0 +1,8 @@
+
+<div>
+    <h4>Parent</h4>
+    x: <input type="text" [(ngModel)]=x /><br>
+    y: <input type="text" [(ngModel)]=y /><br>
+    z: {{z}}
+</div>
+<app-child [x]=x [y]=y (emitter)=sum($event)></app-child>

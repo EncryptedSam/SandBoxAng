@@ -1,0 +1,39 @@
+<h3>Add New Book</h3>
+
+<div class="grid-container">
+    <div class="item1">
+        <input type="text" placeholder="Book Name" [(ngModel)] = newBook.name>
+    </div>
+    <div class="item2">
+        <input type="text" placeholder="Book Price" [(ngModel)] = newBook.price>
+    </div>
+    <div class="item3">
+        <textarea rows="5" placeholder="Description" [(ngModel)] = newBook.description></textarea>
+    </div>
+    <div class="item4">
+        <button (click)="add()">Add</button>
+    </div>
+</div>
+
+<h3>Books</h3>
+<!-- <button style="float:right;margin: 18.720px 0px;">Add</button> -->
+<table class="books-shelf">
+    <thead>
+        <tr>
+            <td>Sl.No</td>
+            <td>Name</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let b of books;let i = index">
+            <td>{{i+1}}</td>
+            <td>{{b.name}}</td>
+            <td>
+                <button class="btn" (click)="view(i)">View</button>
+                <button class="btn" (click)="edit(i)">Edit</button>
+                <button class="btn" (click)="delete(i)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

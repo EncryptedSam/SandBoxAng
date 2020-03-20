@@ -1,0 +1,49 @@
+.books-shelf{
+    width: 100%;
+    border: 1px solid black;
+    /* border-collapse: separate; */
+    border-spacing: 0;
+}
+
+.books-shelf td{
+    border: 1px solid black;   
+    text-align: center;
+}
+
+.books-shelf > thead > tr > td{
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn{
+    margin-right: 5px;
+}
+
+
+.item1 { grid-area: name; }
+.item2 { grid-area: price; }
+.item3 { grid-area: description; }
+.item4 { grid-area: add-btn; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'name name price price'
+        'description description description description'
+        'add-btn add-btn add-btn add-btn ';
+    grid-gap: 10px;
+    background-color: white;
+}
+
+.item1 > input{
+    width: 100%;
+}
+.item2 > input{
+    width: 100%;
+}
+.item3 > textarea{
+    width: 100%;
+}
+.item4 > button{
+    width: 100%;
+}
